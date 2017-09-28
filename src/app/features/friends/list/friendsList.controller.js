@@ -1,6 +1,7 @@
 export default class FriendsListController{
-    constructor(FriendsService){
+    constructor(FriendsService, $state){
         this.FriendsService = FriendsService;
+        this.$state = $state;
         this.friends = [];
         this.list();
     }
@@ -13,7 +14,11 @@ export default class FriendsListController{
             })
     }
 
+    add(){
+        this.$state.go('friendsCreate');
+    }
+
 
 }
 
-FriendsListController.$inject = ['FriendsService']
+FriendsListController.$inject = ['FriendsService', '$state'];

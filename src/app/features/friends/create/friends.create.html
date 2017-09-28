@@ -1,0 +1,28 @@
+<div class="row">
+    <h5>Cadastro de Amigos</h5>
+    <form class="col-s12">
+        <div class="row">
+            <div class="input-field col s7">
+                <input type="text" id="nome" ng-model="vm.friend.name">
+                <label for="nome">Nome</label>
+            </div>
+
+            <div class="input-field col s5">
+                <input type="number" id="age" ng-model="vm.friend.age">
+                <label for="age">Idade</label>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="input-field col s7">
+                <input name="gender" type="radio" id="male" ng-model="vm.friend.gender" value="M" />
+                <label for="male">Masculino</label>
+
+                <input name="gender" type="radio" id="female" ng-model="vm.friend.gender" value="F" />
+                <label for="female">Feminino</label>
+            </div>
+        </div>-->
+        <button class="btn waves-effect waves-light" ng-click="vm.add(vm.friend)">Salvar
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+</div>

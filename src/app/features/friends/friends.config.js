@@ -8,4 +8,10 @@ export default function routing($stateProvider) {
             controller : 'FriendsListController',
             controllerAs : 'vm'
         })
+        .state('friendsCreate', {
+            url : '/friends-create',
+            template : require('./create/friends.create.html'),
+            controller : 'FriendsCreateController',
+            controllerAs : 'vm'
+        })
 }
