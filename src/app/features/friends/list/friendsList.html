@@ -1,0 +1,16 @@
+<h5>Amigos</h5>
+<table class="bordered striped">
+    <thead>
+        <tr></tr>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Sexo</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="friend in vm.friends">
+            <td>{{friend.name}}</td>
+            <td>{{friend.age}}</td>
+            <td>{{friend.gender}}</td>
+        </tr>
+    </tbody>
+</table>
