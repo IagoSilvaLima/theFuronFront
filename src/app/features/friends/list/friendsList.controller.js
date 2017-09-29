@@ -1,7 +1,6 @@
 export default class FriendsListController{
-    constructor(FriendsService, $state){
+    constructor(FriendsService){
         this.FriendsService = FriendsService;
-        this.$state = $state;
         this.friends = [];
         this.list();
     }
@@ -10,13 +9,13 @@ export default class FriendsListController{
         var that = this;
          this.FriendsService.getFriends()
             .then((friends)=>{
-                this.friends = friends;
+                this.friends = friends.map((friend)=>{
+                    friend.gender = friend.gender === 'M' ? 'Masculino' : 'Feminino'
+                    return friend;
+                });
             })
     }
 
-    add(){
-        this.$state.go('friendsCreate');
-    }
 
 
 }

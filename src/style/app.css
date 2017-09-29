@@ -2,6 +2,10 @@
   padding-left: 10px;
 }
 
-table{
-  margin-bottom: 20px;
+.wrapper{
+  padding-left: 300px;
+}
+
+.card{
+  padding-bottom: 40px;
 }

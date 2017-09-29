@@ -8,4 +8,10 @@ export default function routing($stateProvider) {
             controller : 'PlacesListController',
             controllerAs : 'vm'
         })
+        .state('places-create', {
+            url : '/places-create',
+            template : require('./create/places.create.html'),
+            controller : 'PlacesCreateController',
+            controllerAs : 'vm'
+        })
 }

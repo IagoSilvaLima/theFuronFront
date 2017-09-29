@@ -1,12 +1,17 @@
-<h5>Lugares</h5>
-<table class="bordered striped">
-    <thead>
-        <tr></tr>
-            <th>Nome</th>
-    </thead>
-    <tbody>
-        <tr ng-repeat="place in vm.places">
-            <td>{{place.name}}</td>
-        </tr>
-    </tbody>
-</table>
+<div class="card" style='padding-bottom: 40px'>
+    <div class="card-content">
+
+        <span class="card-title"><i class="material-icons">location_city</i>Lugares</span>
+        <a class="btn-floating btn-large halfway-fab waves-effect waves-light blue" ui-sref="places-create" style='bottom: 12px'><i class="material-icons">add_location</i></a>
+        <hr/>
+
+        <ul class="collection" style='border: 0'>
+            <li class="collection-item" ng-repeat='place in vm.places'>
+                <span class="title">{{place.name}}</span>
+                <a href="#!" class="secondary-content" ><i class="material-icons" style='color: #656565'>edit</i></a>
+                <a href="#!" class="secondary-content"><i class="material-icons" style='color: #656565'>delete</i></a>
+            </li>
+
+        </ul>
+    </div>
+</div>
