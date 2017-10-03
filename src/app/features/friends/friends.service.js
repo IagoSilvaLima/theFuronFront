@@ -6,16 +6,12 @@ export default class FriendsService{
 
     getFriends(){
         return this.$http.get(this.url)
-            .then(function(data){
-                return data.data;
-            })
+            .then((data)=> data.data)
     }
 
     addFriend(friend){
         return this.$http.post(this.url, friend)
-            .then(function(data){
-                return data.data;
-            })
+            .then((data)=> data.data)
     }
 }
 

@@ -73,6 +73,12 @@ angular-material@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.5.tgz#a5450cd8205e15a7691edc389476094cf86d592b"
 
+angular-materialize@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/angular-materialize/-/angular-materialize-0.2.2.tgz#13304ce00e983e02d24cac4d835e1f4b9cb10cd3"
+  dependencies:
+    node-materialize "https://github.com/ryepdx/node-materialize/tarball/master"
+
 angular-mocks@^1.5.0:
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.6.6.tgz#c93018e7838c6dc5ceaf1a6bcf9be13c830ea515"
@@ -1962,7 +1968,7 @@ graceful-fs@^4.1.2, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
-hammerjs@^2.0.8:
+hammerjs@^2.0.4, hammerjs@^2.0.8:
   version "2.0.8"
   resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
 
@@ -2436,9 +2442,13 @@ jasmine-core@^2.3.4:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.8.0.tgz#bcc979ae1f9fd05701e45e52e65d3a5d63f1a24e"
 
-"jquery@^3.0.0 || ^2.1.4":
+jquery@>=1.7, "jquery@^3.0.0 || ^2.1.4", jquery@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
+
+jquery@^2.1.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-2.2.4.tgz#2c89d6889b5eac522a7eea32c14521559c6cbf02"
 
 js-base64@^2.1.9:
   version "2.3.2"
@@ -2923,6 +2933,14 @@ node-libs-browser@2.0.0, node-libs-browser@^2.0.0:
     util "^0.10.3"
     vm-browserify "0.0.4"
 
+"node-materialize@https://github.com/ryepdx/node-materialize/tarball/master":
+  version "1.1.1"
+  resolved "https://github.com/ryepdx/node-materialize/tarball/master#181c718e28c10ddf65ca21dcda93bea01e4daba7"
+  dependencies:
+    hammerjs "^2.0.4"
+    jquery "^2.1.4"
+    pickadate "^3.5.6"
+
 node-pre-gyp@^0.6.36:
   version "0.6.38"
   resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.6.38.tgz#e92a20f83416415bb4086f6d1fb78b3da73d113d"
@@ -3223,6 +3241,12 @@ phantomjs-prebuilt@^2.1.4, phantomjs-prebuilt@^2.1.7:
     request "~2.81.0"
     request-progress "~2.0.1"
     which "~1.2.10"
+
+pickadate@^3.5.6:
+  version "3.5.6"
+  resolved "https://registry.yarnpkg.com/pickadate/-/pickadate-3.5.6.tgz#c998302343b79a19954fc49c45cc708347602806"
+  dependencies:
+    jquery ">=1.7"
 
 pify@^2.0.0:
   version "2.3.0"

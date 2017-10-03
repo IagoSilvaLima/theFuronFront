@@ -1,0 +1,19 @@
+<div class="card">
+    <div class="card-content">
+
+        <span class="card-title"><i class="material-icons">person</i> Saídas</span>
+        <a class="btn-floating btn-large halfway-fab waves-effect waves-light blue" ui-sref="outputs-create" style='bottom: 12px'><i class="material-icons">person_add</i></a>
+        <hr/>
+
+        <ul class="collection" style='border: 0'>
+            <li class="collection-item" ng-repeat='output in vm.outputs'>
+                <span class="title">{{output.date| date : 'dd/MM/yyyy HH:mm'}}</span>
+                <a href="#!" class="secondary-content" ><i class="material-icons" style='color: #656565'>edit</i></a>
+                <a href="#!" class="secondary-content"><i class="material-icons" style='color: #656565'>delete</i></a>
+                <p>Amigo : {{output.friend.name}}</p>
+                <p>Local : {{output.place.name}}</p>
+            </li>
+
+        </ul>
+    </div>
+</div>

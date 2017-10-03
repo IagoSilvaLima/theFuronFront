@@ -15,6 +15,14 @@
                         <input placeholder="Digite sua idade" type="number" id="age" ng-model="vm.friend.age">
                         <label for="age">Idade</label>
                     </div>
+                    <div class="input-field col s12">
+                        <select material-select watch ng-model="vm.friend.gender">
+                            <option value="" disabled selected>Escolha seu sexo</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                        </select>
+                        <label>Sexo</label>
+                    </div>
                 </form>
             </div>
         </div>

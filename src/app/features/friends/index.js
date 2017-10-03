@@ -4,8 +4,9 @@ import uirouter from 'angular-ui-router';
 import routing from './friends.config';
 import FriendsService from './friends.service';
 
-import FriendsListController from './list/friendsList.controller';
-import FriendsCreateController from './create/friendsCreate.controller';
+import FriendsListController from './list/friends.list.controller';
+import FriendsCreateController from './create/friends.create.controller';
+
 
 export default angular.module('app.friends',[])
     .config(routing)

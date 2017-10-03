@@ -5,7 +5,6 @@ export default class FriendsCreateController {
     }
 
     add(friend){
-        friend.gender = 'F';
         this.FriendsService.addFriend(friend)
             .then( ()=> this.$state.go('friends'))
     }

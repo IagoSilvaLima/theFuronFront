@@ -4,7 +4,7 @@ export default function routing($stateProvider) {
     $stateProvider
         .state('places', {
             url : '/places',
-            template : require('./list/placesList.html'),
+            template : require('./list/places.list.html'),
             controller : 'PlacesListController',
             controllerAs : 'vm'
         })
