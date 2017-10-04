@@ -1,7 +1,8 @@
 export default class PlacesListController{
-    constructor(PlacesService){
+    constructor(PlacesService, $state){
         this.PlacesService = PlacesService;
         this.places = [];
+        this.$state = $state;
         this.list();
     }
 
@@ -13,7 +14,12 @@ export default class PlacesListController{
             })
     }
 
+    edit(id){
+
+        this.$state.go('places-edit', {id : id});
+    }
+
 
 }
 
-PlacesListController.$inject = ['PlacesService']
+PlacesListController.$inject = ['PlacesService', '$state']

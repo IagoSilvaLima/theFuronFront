@@ -1,6 +1,8 @@
 export default class OutputsCreateController {
-    constructor(OutputsService, $state){
+    constructor(OutputsService,FriendsService,PlacesService,$state){
         this.OutputsService = OutputsService;
+        FriendsService.getFriends().then( (friends) => this.friends = friends);
+        PlacesService.getPlaces().then( (places) => this.places = places);
         this.$state = $state;
     }
 
@@ -10,4 +12,4 @@ export default class OutputsCreateController {
     }
 }
 
-OutputsCreateController.$inject = ['OutputsService', '$state'] ;
+OutputsCreateController.$inject = ['OutputsService','FriendsService','PlacesService','$state'] ;

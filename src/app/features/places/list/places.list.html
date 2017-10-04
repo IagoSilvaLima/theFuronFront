@@ -8,7 +8,7 @@
         <ul class="collection" style='border: 0'>
             <li class="collection-item" ng-repeat='place in vm.places'>
                 <span class="title">{{place.name}}</span>
-                <a href="#!" class="secondary-content" ><i class="material-icons" style='color: #656565'>edit</i></a>
+                <a href="#!" ng-click="vm.edit(place._id)" class="secondary-content" ><i class="material-icons" style='color: #656565'>edit</i></a>
                 <a href="#!" class="secondary-content"><i class="material-icons" style='color: #656565'>delete</i></a>
             </li>
 

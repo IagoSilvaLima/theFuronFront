@@ -14,4 +14,10 @@ export default function routing($stateProvider) {
             controller : 'PlacesCreateController',
             controllerAs : 'vm'
         })
+        .state('places-edit', {
+            url : '/places-edit/:id',
+            template : require('./edit/places.edit.html'),
+            controller : 'PlacesEditController',
+            controllerAs : 'vm'
+        })
 }

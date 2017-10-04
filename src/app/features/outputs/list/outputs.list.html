@@ -7,7 +7,7 @@
 
         <ul class="collection" style='border: 0'>
             <li class="collection-item" ng-repeat='output in vm.outputs'>
-                <span class="title">{{output.date| date : 'dd/MM/yyyy HH:mm'}}</span>
+                <span class="title">{{output.date + ' '+ output.hour}}</span>
                 <a href="#!" class="secondary-content" ><i class="material-icons" style='color: #656565'>edit</i></a>
                 <a href="#!" class="secondary-content"><i class="material-icons" style='color: #656565'>delete</i></a>
                 <p>Amigo : {{output.friend.name}}</p>

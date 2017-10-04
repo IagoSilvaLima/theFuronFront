@@ -5,10 +5,12 @@ import routing from './places.config';
 import PlacesService from './places.service';
 import PlacesListController from './list/places.list.controller';
 import PlacesCreateController from './create/places.create.controller';
+import PlacesEditController from './edit/places.edit.controller'; 
 
 export default angular.module('app.places',[])
     .config(routing)
     .service('PlacesService', PlacesService )
     .controller('PlacesListController', PlacesListController)
     .controller('PlacesCreateController', PlacesCreateController)
+    .controller('PlacesEditController', PlacesEditController)
     .name;
