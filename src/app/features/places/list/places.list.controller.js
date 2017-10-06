@@ -15,8 +15,12 @@ export default class PlacesListController{
     }
 
     edit(id){
-
         this.$state.go('places-edit', {id : id});
+    }
+
+    remove(id){
+        this.PlacesService.removePlace(id)
+            .then(() => this.list())
     }
 
 

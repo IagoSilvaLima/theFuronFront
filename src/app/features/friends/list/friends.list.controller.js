@@ -1,7 +1,8 @@
 export default class FriendsListController{
-    constructor(FriendsService){
+    constructor(FriendsService, $state){
         this.FriendsService = FriendsService;
         this.friends = [];
+        this.$state = $state;
         this.list();
     }
 
@@ -14,6 +15,15 @@ export default class FriendsListController{
                     return friend;
                 });
             })
+    }
+
+    edit(id){
+        this.$state.go('friends-edit', {id : id})
+    }
+
+    remove(id){
+        this.FriendsService.removeFriend(id)
+            .then(() => this.list())
     }
 
 

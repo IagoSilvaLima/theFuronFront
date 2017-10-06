@@ -2,7 +2,7 @@ export default class PlacesEditController {
     constructor(PlacesService, $state){
         this.PlacesService = PlacesService;
         this.$state = $state;
-        this. _getPlace($state.params.id);
+        this._getPlace($state.params.id);
     }
 
     save(place){

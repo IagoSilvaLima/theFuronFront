@@ -15,7 +15,6 @@ export default class PlacesService{
     }
 
     updatePlace(id, place){
-        console.log(id, place);
         return this.$http.put(this.url + id, place)
             .then((data) => data.data)
     }
@@ -23,6 +22,11 @@ export default class PlacesService{
     addPlace(place){
         return this.$http.post(this.url, place)
             .then((data) => data.data)
+    }
+
+    removePlace(id){
+        return this.$http.delete(this.url + id)
+            .then((data)=> data.data)
     }
 }
 

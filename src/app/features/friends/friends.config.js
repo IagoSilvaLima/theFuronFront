@@ -15,4 +15,10 @@ export default function routing($stateProvider) {
             controller : 'FriendsCreateController',
             controllerAs : 'vm'
         })
+        .state('friends-edit', {
+            url : '/friends-edit/:id',
+            template : require('./edit/friends.edit.html'),
+            controller : 'FriendsEditController',
+            controllerAs : 'vm'
+        })
 }

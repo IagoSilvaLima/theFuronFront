@@ -6,6 +6,7 @@ import FriendsService from './friends.service';
 
 import FriendsListController from './list/friends.list.controller';
 import FriendsCreateController from './create/friends.create.controller';
+import FriendsEditController from './edit/friends.edit.controller';
 
 
 export default angular.module('app.friends',[])
@@ -13,4 +14,5 @@ export default angular.module('app.friends',[])
     .service('FriendsService', FriendsService)
     .controller('FriendsListController', FriendsListController)
     .controller('FriendsCreateController', FriendsCreateController)
+    .controller('FriendsEditController', FriendsEditController)
     .name;

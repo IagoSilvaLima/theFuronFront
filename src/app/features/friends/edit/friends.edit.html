@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title"><a ui-sref='friends'><i class="material-icons">person</i></a> Editar Amigo</span>
+            <a class="btn-floating btn-large halfway-fab waves-effect waves-light blue" style='bottom: 12px' ng-click="vm.save(vm.friend)"><i class="material-icons">done</i></a>
+
+
+            <div class="row">
+                <form class="col col s12">
+                    <div class="input-field col s12">
+                        <input placeholder="Digite seu Nome.." type="text" id="nome" ng-model="vm.friend.name">
+                        <label for="nome">Nome</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input placeholder="Digite sua idade" type="number" id="age" ng-model="vm.friend.age">
+                        <label for="age">Idade</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <select material-select watch ng-model="vm.friend.gender">
+                            <option value="" disabled selected>Escolha seu sexo</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                        </select>
+                        <label>Sexo</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

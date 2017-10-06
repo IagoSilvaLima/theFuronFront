@@ -2893,6 +2893,10 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+ng-sweet-alert-2@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/ng-sweet-alert-2/-/ng-sweet-alert-2-0.0.4.tgz#f2577d6e9fe339db3a4ac0e173208f9f538a3f97"
+
 no-case@^2.2.0:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"
@@ -4274,6 +4278,10 @@ svgo@^0.7.0:
     mkdirp "~0.5.1"
     sax "~1.2.1"
     whet.extend "~0.9.9"
+
+sweetalert2@^6.10.1:
+  version "6.10.1"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-6.10.1.tgz#5b284777a546fb11429915b577088473aa24e0fd"
 
 tapable@^0.2.7, tapable@~0.2.5:
   version "0.2.8"
