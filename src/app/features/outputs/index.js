@@ -6,6 +6,7 @@ import OutputsService from './outputs.service';
 
 import OutputsListController from './list/outputs.list.controller';
 import OutputsCreateController from './create/outputs.create.controller'
+import OutputsEditController from './edit/outputs.edit.controller';
 
 import friends from './../friends/index'
 import places from './../places/index'
@@ -15,4 +16,5 @@ export default angular.module('app.outputs',[])
     .service('OutputsService', OutputsService )
     .controller('OutputsListController', OutputsListController)
     .controller('OutputsCreateController', OutputsCreateController)
+    .controller('OutputsEditController', OutputsEditController)
     .name;

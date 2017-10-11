@@ -8,8 +8,8 @@
         <ul class="collection" style='border: 0'>
             <li class="collection-item" ng-repeat='output in vm.outputs'>
                 <span class="title">{{output.date + ' '+ output.hour}}</span>
-                <a href="#!" class="secondary-content" ><i class="material-icons" style='color: #656565'>edit</i></a>
-                <a href="#!" class="secondary-content"><i class="material-icons" style='color: #656565'>delete</i></a>
+                <a href="#!" ng-click="vm.edit(output._id)" class="secondary-content" ><i class="material-icons" style='color: #656565'>edit</i></a>
+                <a href="#!" ng-click="vm.remove(output._id)" class="secondary-content"><i class="material-icons" style='color: #656565'>delete</i></a>
                 <p>Amigo : {{output.friend.name}}</p>
                 <p>Local : {{output.place.name}}</p>
             </li>

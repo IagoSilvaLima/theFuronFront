@@ -1,12 +1,27 @@
 export default class OutputsService{
     constructor($http){
         this.$http = $http;
-        this.url = 'http://localhost:3000/outputs';
+        this.url = 'http://localhost:3000/outputs/';
     }
 
     getOutputs(){
         return this.$http.get(this.url)
             .then((data) => data.data);
+    }
+
+    getOutput(id){
+        return this.$http.get(this.url + id)
+            .then((data) => data.data);
+    }
+
+    updateOutput(id, output){
+        return this.$http.put(this.url + id, output)
+            .then((data) => data.data)
+    }
+
+    removeOutput(id){
+        return this.$http.delete(this.url + id)
+            .then((data)=> data.data)
     }
 
     addOutput(output){

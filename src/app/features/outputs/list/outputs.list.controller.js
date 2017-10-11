@@ -1,7 +1,8 @@
 export default class OutputsListController{
-    constructor(OutputsService){
+    constructor(OutputsService, $state){
         this.OutputsService = OutputsService;
         this.outputs = [];
+        this.$state = $state;
         this.list();
     }
 
@@ -13,7 +14,16 @@ export default class OutputsListController{
             })
     }
 
+    edit(id){
+        this.$state.go('outputs-edit', {id : id});
+    }
+
+    remove(id){
+        this.OutputsService.removeOutput(id)
+            .then(() => this.list())
+    }
+
 
 }
 
-OutputsListController.$inject = ['OutputsService']
+OutputsListController.$inject = ['OutputsService', '$state']

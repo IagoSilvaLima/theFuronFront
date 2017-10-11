@@ -14,4 +14,10 @@ export default function routing($stateProvider) {
             controller : 'OutputsCreateController',
             controllerAs : 'vm'
         })
+        .state('outputs-edit', {
+            url : '/outputs-edit/:id',
+            template : require('./edit/outputs.edit.html'),
+            controller : 'OutputsEditController',
+            controllerAs : 'vm'
+        })
 }
