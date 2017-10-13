@@ -23,6 +23,16 @@ export default class OutputsListController{
             .then(() => this.list())
     }
 
+    cancel(id){
+        this.OutputsService.cancelOutput(id)
+            .then(() => this.list())
+    }
+
+    confirm(id){
+        this.OutputsService.confirmOutput(id)
+            .then(() => this.list())
+    }
+
 
 }
 

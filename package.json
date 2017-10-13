@@ -20,13 +20,15 @@
   },
   "homepage": "https://github.com/preboot/angularjs-webpack",
   "dependencies": {
+    "alertifyjs": "^1.11.0",
     "angular": "^1.5.0",
     "angular-material": "^1.1.5",
     "angular-materialize": "^0.2.2",
     "angular-ui-router": "^1.0.3",
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
-    "materialize-css": "^0.100.2"
+    "materialize-css": "^0.100.2",
+    "ng-alertify": "^1.0.2"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.0",

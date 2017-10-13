@@ -10,6 +10,8 @@
                 <span class="title">{{output.date + ' '+ output.hour}}</span>
                 <a href="#!" ng-click="vm.edit(output._id)" class="secondary-content" ><i class="material-icons" style='color: #656565'>edit</i></a>
                 <a href="#!" ng-click="vm.remove(output._id)" class="secondary-content"><i class="material-icons" style='color: #656565'>delete</i></a>
+                <a  ng-show="output.canceled" href="#!" ng-click="vm.confirm(output._id)" class="secondary-content"><i class="material-icons" style='color: #656565'>event_available</i></a>
+                <a ng-hide="output.canceled" href="#!" ng-click="vm.cancel(output._id)" class="secondary-content"><i class="material-icons" style='color: #656565'>event_busy</i></a>
                 <p>Amigo : {{output.friend.name}}</p>
                 <p>Local : {{output.place.name}}</p>
             </li>

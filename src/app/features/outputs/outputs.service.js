@@ -24,6 +24,16 @@ export default class OutputsService{
             .then((data)=> data.data)
     }
 
+    cancelOutput(id){
+        return this.$http.put(this.url + 'cancel/' +  id)
+            .then((data)=> data.data)
+    }
+
+    confirmOutput(id){
+        return this.$http.put(this.url + 'confirm/' + id)
+            .then((data)=> data.data)
+    }
+
     addOutput(output){
         return this.$http.post(this.url, output)
             .then((data)=> data.data)
