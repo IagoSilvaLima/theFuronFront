@@ -8,10 +8,10 @@
         <div class="row">
             <div class="col col s12">
                 <div class="input-field col s12">
-                    <select ng-options = "friend._id as friend.name for friend in vm.friends" material-select watch ng-model="vm.output.friend">
-                            <option value="" disabled selected>Escolha seu Amigo</option>
+                    <select ng-options = "friend._id as friend.name for friend in vm.friends" material-select multiple watch ng-model="vm.output.friends">
+                            <option value="" disabled selected>Escolha seus Amigos</option>
                         </select>
-                    <label>Amigo</label>
+                    <label>Amigos</label>
                 </div>
                 <div class="input-field col s12">
                     <select ng-options = "place._id as place.name for place in vm.places" material-select watch ng-model="vm.output.place">

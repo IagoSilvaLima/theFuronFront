@@ -3,6 +3,7 @@ export default class OutputsCreateController {
         this.OutputsService = OutputsService;
         FriendsService.getFriends().then( (friends) => this.friends = friends);
         PlacesService.getPlaces().then( (places) => this.places = places);
+        this.output = {date : new Date()};
         this.$state = $state;
     }
 

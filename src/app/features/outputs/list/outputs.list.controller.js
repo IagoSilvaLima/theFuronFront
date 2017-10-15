@@ -1,6 +1,7 @@
 export default class OutputsListController{
-    constructor(OutputsService, $state){
+    constructor(OutputsService, $state, DateService){
         this.OutputsService = OutputsService;
+        this.DateService = DateService;
         this.outputs = [];
         this.$state = $state;
         this.list();
@@ -10,7 +11,11 @@ export default class OutputsListController{
         var that = this;
          this.OutputsService.getOutputs()
             .then((outputs)=>{
-                this.outputs = outputs;
+                this.outputs = outputs.map((output)=>{
+                    output.date = this.DateService.format(output.date);
+                    output.friends = this._getFriendsFormat(output.friends);
+                    return output;
+                })
             })
     }
 
@@ -33,7 +38,10 @@ export default class OutputsListController{
             .then(() => this.list())
     }
 
+    _getFriendsFormat(friends){
+        return friends.map((friend) => friend.name).join(',');
+    }
 
 }
 
-OutputsListController.$inject = ['OutputsService', '$state']
+OutputsListController.$inject = ['OutputsService', '$state', 'DateService'];

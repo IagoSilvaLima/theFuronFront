@@ -10,8 +10,11 @@ import OutputsEditController from './edit/outputs.edit.controller';
 
 import friends from './../friends/index'
 import places from './../places/index'
+import commons from './../commons/index'
 
-export default angular.module('app.outputs',[])
+console.log(commons);
+
+export default angular.module('app.outputs',[friends, places, commons])
     .config(routing)
     .service('OutputsService', OutputsService )
     .controller('OutputsListController', OutputsListController)

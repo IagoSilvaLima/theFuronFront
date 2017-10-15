@@ -15,7 +15,6 @@ export default class OutputsEditController {
     _getOutput(id){
         this.OutputsService.getOutput(id)
             .then((output)=>{
-                output.friend = output.friend._id;
                 output.place = output.place._id
                 this.output = output;
             })
